@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Friday March 22 11:24:40 2024
-@author: chris.pham
 """
 
 #The following code will work for Python 3.7.x+
@@ -63,10 +62,6 @@ while (True):
 
     messages = [{"role": "assistant", "content": myrole}]
     messages.append({"role": "assistant", "content": mytask})
-
-    #Uncomment each of the optional parameters below and 
-    #  observe the differences. Try different values and see more differences.
-    #Go to this site to learn about parameters https://www.codecademy.com/article/setting-parameters-in-open-ai
     
     answers = openai.ChatCompletion.create(
         model="gpt-4o-mini",
@@ -82,4 +77,5 @@ while (True):
     print("----------------\n")
     print(answers['choices'][0]['message']['content'])
     # same as print(answers.choices[0].message.content)
+
     print("----------------\n")
